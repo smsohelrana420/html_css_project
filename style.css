@@ -1,33 +1,86 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-#container{
-    width: 1280px;
-    margin: auto;
+nav {
+  width: 1280px;
+  margin: auto;
 }
 
-.logo > h2{
-    color: white;
+header {
+  background-color: dodgerblue;
 }
-#navigation{
-    padding: 0px 20px;
-    background-color: dodgerblue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.logo > h2 {
+  color: white;
 }
-#navigation > ul{
-    display: flex;
+#navigation {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#navigation > ul > li{
-    list-style: none;
-    margin: 0px 5px;
-    padding: 15px 10px;
+#navigation > ul {
+  display: flex;
 }
-#navigation > ul >li > a{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
+
+#navigation > ul > li {
+  list-style: none;
+  margin: 0px 5px;
+  margin-left: -15px;
+  padding: 15px 5px;
 }
+#navigation > ul > li:hover > a {
+  background-color: rgb(1, 96, 190);
+}
+#navigation > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  border-right: 2px solid white;
+  padding: 15px 20px;
+  transition: 1s;
+}
+
+#navigation > ul > li:last-child > a {
+  border-right: none;
+}
+
+/* dropdownMenu Code Start */
+
+.dropdownMenu {
+  opacity: 0;
+  visibility: hidden;
+  background-color: dodgerblue;
+  text-align: center;
+  margin-top: 15px;
+  width: 188px;
+  position: absolute;
+  border-radius: 2px;
+  transition: 1s;
+}
+.dropdownMenu > li {
+  list-style: none;
+  padding: 10px 0px;
+  border-bottom: 1px solid white;
+  transition: 1s;
+}
+.dropdownMenu >li:hover{
+    background-color: rgb(2, 86, 170);
+}
+.dropdownMenu > li:first-child {
+  border-top: 1px solid white;
+}
+.dropdownMenu > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+#navigation > ul >li:hover >ul{
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+    
+}
+
